@@ -1,0 +1,5 @@
+{
+  "name": "NeumaWave Shaper",
+  "description": "A state-of-the-art neumorphic wavetable synthesizer allowing users to draw custom waveforms in real-time.",
+  "requestFramePermissions": []
+}
