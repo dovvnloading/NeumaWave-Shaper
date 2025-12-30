@@ -27,13 +27,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'npm'
+          # Cache removed because package-lock.json is missing in the repo
           
       - name: Setup Pages
         uses: actions/configure-pages@v5
         
       - name: Install dependencies
-        run: npm ci
+        # Changed to npm install because npm ci requires a package-lock.json
+        run: npm install
         
       - name: Build
         run: npm run build
