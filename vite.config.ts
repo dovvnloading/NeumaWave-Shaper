@@ -5,8 +5,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      // Base URL must match your GitHub repository name
-      base: '/NeumaWave-Shaper/',
+      // Relative base ensures assets load regardless of where the app is hosted (root or subdir)
+      base: './',
       server: {
         port: 3000,
         host: '0.0.0.0',
@@ -18,7 +18,8 @@ export default defineConfig(({ mode }) => {
       },
       resolve: {
         alias: {
-          '@': path.resolve(__dirname, '.'),
+          // Fix for "ReferenceError: __dirname is not defined" in ESM
+          '@': path.resolve(process.cwd(), '.'),
         }
       }
     };
