@@ -50,7 +50,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ onClose }) => {
         {/* Social Links Stack */}
         <div className="flex flex-col gap-3">
              <CreditLink 
-                href="https://dovvnloading.github.io/" 
+                href="https://matt-wesney.github.io/website/" 
                 icon={<Globe size={18} />} 
                 label="Personal Webpage" 
                 sublabel="Portfolio & Projects"
